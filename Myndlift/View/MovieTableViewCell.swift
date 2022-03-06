@@ -18,9 +18,11 @@ class MovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         oviewViewLabel.numberOfLines = 3
-        //        movieImage.image = UIImage()
-        // Initialization code
+      
     }
+    
+    /// this function is used to update cell views with data
+    /// - Parameter moive: is an instance of Movie
     func updateCell(moive:Movie){
         ratingLabel.text = "\(moive.rating ?? 0)"
         titleLabel.text = moive.title
@@ -28,26 +30,13 @@ class MovieTableViewCell: UITableViewCell {
         DispatchQueue.global(qos: .userInteractive).async{
             self.movieImage.sd_setImage(with: moive.getImageURL(), placeholderImage: UIImage(named: "playlist"), options: .progressiveLoad)
         }
-//        imageURL = moive.getImageURL()
       
     }
-    func updateImage(){
+   
         
-//
-//        do{
-//            Service.instance.updateImage(imageURL: imageURL, withCompletion: { image, error in
-//                DispatchQueue.main.async { [self] in
-//                    self.movieImage.image = UIImage(data: image!)
-//
-//                }
-//            })
-//        }catch{
-//
-//        }
-//
-        
-    }
     
+    
+    /// used to clean all views data and rest it
     override func prepareForReuse() {
         super.prepareForReuse()
         movieImage.image = UIImage(named: "playlist")
