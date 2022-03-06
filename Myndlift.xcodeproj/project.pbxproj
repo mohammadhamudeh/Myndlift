@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D5003D0E27D492DC00EB49D5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D5003D0D27D492DC00EB49D5 /* SDWebImage */; };
+		D5003D1127D5014F00EB49D5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5003D1027D5014F00EB49D5 /* Alamofire */; };
+		D5528E8627CFF67500A6B5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528E8527CFF67500A6B5AC /* AppDelegate.swift */; };
+		D5528E8827CFF67500A6B5AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528E8727CFF67500A6B5AC /* SceneDelegate.swift */; };
+		D5528E8D27CFF67500A6B5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5528E8B27CFF67500A6B5AC /* Main.storyboard */; };
+		D5528E8F27CFF67B00A6B5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5528E8E27CFF67B00A6B5AC /* Assets.xcassets */; };
+		D5528E9227CFF67B00A6B5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5528E9027CFF67B00A6B5AC /* LaunchScreen.storyboard */; };
+		D5528E9F27D0A45200A6B5AC /* MovieSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528E9E27D0A45100A6B5AC /* MovieSuggestionViewController.swift */; };
+		D5528EA127D0A47700A6B5AC /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528EA027D0A47700A6B5AC /* MovieTableViewCell.swift */; };
+		D5528EA327D0A5F300A6B5AC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528EA227D0A5F300A6B5AC /* Movie.swift */; };
+		D5528EA627D0A8E300A6B5AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528EA527D0A8E300A6B5AC /* Constants.swift */; };
+		D5528EA927D0AFBF00A6B5AC /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5528EA827D0AFBE00A6B5AC /* Services.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D5528E8227CFF67500A6B5AC /* Myndlift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myndlift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5528E8527CFF67500A6B5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5528E8727CFF67500A6B5AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D5528E8C27CFF67500A6B5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5528E8E27CFF67B00A6B5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5528E9127CFF67B00A6B5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5528E9327CFF67B00A6B5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5528E9927CFF68A00A6B5AC /* Myndlift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Myndlift.entitlements; sourceTree = "<group>"; };
+		D5528E9E27D0A45100A6B5AC /* MovieSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSuggestionViewController.swift; sourceTree = "<group>"; };
+		D5528EA027D0A47700A6B5AC /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		D5528EA227D0A5F300A6B5AC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D5528EA527D0A8E300A6B5AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5528EA827D0AFBE00A6B5AC /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5528E7F27CFF67500A6B5AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5003D0E27D492DC00EB49D5 /* SDWebImage in Frameworks */,
+				D5003D1127D5014F00EB49D5 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5528E7927CFF67500A6B5AC = {
+			isa = PBXGroup;
+			children = (
+				D5528E8427CFF67500A6B5AC /* Myndlift */,
+				D5528E8327CFF67500A6B5AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5528E8327CFF67500A6B5AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5528E8227CFF67500A6B5AC /* Myndlift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5528E8427CFF67500A6B5AC /* Myndlift */ = {
+			isa = PBXGroup;
+			children = (
+				D5528EA727D0AFAC00A6B5AC /* Services */,
+				D5528EA427D0A8AC00A6B5AC /* Utiles */,
+				D5528E9D27CFF6CA00A6B5AC /* Storyboards */,
+				D5528E9C27CFF6BE00A6B5AC /* Model */,
+				D5528E9B27CFF6BA00A6B5AC /* View */,
+				D5528E9A27CFF6B300A6B5AC /* Controller */,
+				D5528E9927CFF68A00A6B5AC /* Myndlift.entitlements */,
+				D5528E8527CFF67500A6B5AC /* AppDelegate.swift */,
+				D5528E8727CFF67500A6B5AC /* SceneDelegate.swift */,
+				D5528E8E27CFF67B00A6B5AC /* Assets.xcassets */,
+				D5528E9327CFF67B00A6B5AC /* Info.plist */,
+			);
+			path = Myndlift;
+			sourceTree = "<group>";
+		};
+		D5528E9A27CFF6B300A6B5AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5528E9E27D0A45100A6B5AC /* MovieSuggestionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5528E9B27CFF6BA00A6B5AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5528EA027D0A47700A6B5AC /* MovieTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5528E9C27CFF6BE00A6B5AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5528EA227D0A5F300A6B5AC /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5528E9D27CFF6CA00A6B5AC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D5528E9027CFF67B00A6B5AC /* LaunchScreen.storyboard */,
+				D5528E8B27CFF67500A6B5AC /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D5528EA427D0A8AC00A6B5AC /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				D5528EA527D0A8E300A6B5AC /* Constants.swift */,
+			);
+			path = Utiles;
+			sourceTree = "<group>";
+		};
+		D5528EA727D0AFAC00A6B5AC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D5528EA827D0AFBE00A6B5AC /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5528E8127CFF67500A6B5AC /* Myndlift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5528E9627CFF67B00A6B5AC /* Build configuration list for PBXNativeTarget "Myndlift" */;
+			buildPhases = (
+				D5528E7E27CFF67500A6B5AC /* Sources */,
+				D5528E7F27CFF67500A6B5AC /* Frameworks */,
+				D5528E8027CFF67500A6B5AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Myndlift;
+			packageProductDependencies = (
+				D5003D0D27D492DC00EB49D5 /* SDWebImage */,
+				D5003D1027D5014F00EB49D5 /* Alamofire */,
+			);
+			productName = Myndlift;
+			productReference = D5528E8227CFF67500A6B5AC /* Myndlift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5528E7A27CFF67500A6B5AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D5528E8127CFF67500A6B5AC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D5528E7D27CFF67500A6B5AC /* Build configuration list for PBXProject "Myndlift" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5528E7927CFF67500A6B5AC;
+			packageReferences = (
+				D5003D0C27D492DB00EB49D5 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				D5003D0F27D5014F00EB49D5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = D5528E8327CFF67500A6B5AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5528E8127CFF67500A6B5AC /* Myndlift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5528E8027CFF67500A6B5AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5528E9227CFF67B00A6B5AC /* LaunchScreen.storyboard in Resources */,
+				D5528E8F27CFF67B00A6B5AC /* Assets.xcassets in Resources */,
+				D5528E8D27CFF67500A6B5AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5528E7E27CFF67500A6B5AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5528E8627CFF67500A6B5AC /* AppDelegate.swift in Sources */,
+				D5528E9F27D0A45200A6B5AC /* MovieSuggestionViewController.swift in Sources */,
+				D5528EA127D0A47700A6B5AC /* MovieTableViewCell.swift in Sources */,
+				D5528EA927D0AFBF00A6B5AC /* Services.swift in Sources */,
+				D5528E8827CFF67500A6B5AC /* SceneDelegate.swift in Sources */,
+				D5528EA327D0A5F300A6B5AC /* Movie.swift in Sources */,
+				D5528EA627D0A8E300A6B5AC /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D5528E8B27CFF67500A6B5AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5528E8C27CFF67500A6B5AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5528E9027CFF67B00A6B5AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5528E9127CFF67B00A6B5AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5528E9427CFF67B00A6B5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5528E9527CFF67B00A6B5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5528E9727CFF67B00A6B5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Myndlift/Myndlift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Myndlift/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.y.gsw.Myndlift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		D5528E9827CFF67B00A6B5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Myndlift/Myndlift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Myndlift/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.y.gsw.Myndlift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5528E7D27CFF67500A6B5AC /* Build configuration list for PBXProject "Myndlift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5528E9427CFF67B00A6B5AC /* Debug */,
+				D5528E9527CFF67B00A6B5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5528E9627CFF67B00A6B5AC /* Build configuration list for PBXNativeTarget "Myndlift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5528E9727CFF67B00A6B5AC /* Debug */,
+				D5528E9827CFF67B00A6B5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5003D0C27D492DB00EB49D5 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D5003D0F27D5014F00EB49D5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5003D0D27D492DC00EB49D5 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5003D0C27D492DB00EB49D5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		D5003D1027D5014F00EB49D5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5003D0F27D5014F00EB49D5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D5528E7A27CFF67500A6B5AC /* Project object */;
+}
