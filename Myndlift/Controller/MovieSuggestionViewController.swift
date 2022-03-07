@@ -68,27 +68,23 @@ class MovieSuggestionViewController: UIViewController {
         removeData()
         loadingIndicator.startAnimating()
         loadingIndicator.isHidden = false
-        
         addNewMoviesCollectionBtn.isEnabled = false
-        
         numberOfMovies = Int(stepperAdd.value)
-       
-            Service.instance.getMoives(numberOfMovies:self.numberOfMovies )
+        Service.instance.getMoives(numberOfMovies:self.numberOfMovies )
         
     }
     
     /// this function is used to clean all data, calls remove data function
-    /// - Parameter sender: <#sender description#>
     @IBAction func clearData(_ sender: UIBarButtonItem) {
         removeData()
     }
     
-   
+    
     
 }
 extension MovieSuggestionViewController:UITableViewDataSource{
     
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -136,15 +132,15 @@ extension MovieSuggestionViewController{
         let alert = UIAlertController(title: "Download Error", message: "WE are having some issues with retriving content.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             alert.dismiss(animated: true) {
-               
+                
             }
         }))
         DispatchQueue.main.async {
             if (self.presentedViewController == nil){
-            self.present(alert, animated: true) {
-                self.addNewMoviesCollectionBtn.isEnabled = true
-                self.loadingIndicator.stopAnimating()
-            }
+                self.present(alert, animated: true) {
+                    self.addNewMoviesCollectionBtn.isEnabled = true
+                    self.loadingIndicator.stopAnimating()
+                }
                 
             }
         }
