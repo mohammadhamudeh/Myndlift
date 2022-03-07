@@ -27,8 +27,9 @@ class MovieTableViewCell: UITableViewCell {
         ratingLabel.text = "\(moive.rating ?? 0)"
         titleLabel.text = moive.title
         oviewViewLabel.text = moive.overview
+       
         DispatchQueue.global(qos: .userInteractive).async{
-            self.movieImage.sd_setImage(with: moive.getImageURL(), placeholderImage: UIImage(named: "playlist"), options: .progressiveLoad)
+            self.movieImage.sd_setImage(with: moive.getImageURL(), placeholderImage: UIImage(named: "playlist"), options: [.progressiveLoad,.continueInBackground,.retryFailed])
         }
       
     }
@@ -39,10 +40,12 @@ class MovieTableViewCell: UITableViewCell {
     /// used to clean all views data and rest it
     override func prepareForReuse() {
         super.prepareForReuse()
+        movieImage.sd_cancelCurrentImageLoad()
         movieImage.image = UIImage(named: "playlist")
         titleLabel.text = ""
         ratingLabel.text = ""
         oviewViewLabel.text = ""
         
     }
+   
 }

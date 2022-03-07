@@ -72,9 +72,9 @@ class MovieSuggestionViewController: UIViewController {
         addNewMoviesCollectionBtn.isEnabled = false
         
         numberOfMovies = Int(stepperAdd.value)
-        DispatchQueue.global(qos: .userInteractive).async {
+       
             Service.instance.getMoives(numberOfMovies:self.numberOfMovies )
-        }
+        
     }
     
     /// this function is used to clean all data, calls remove data function
@@ -140,9 +140,12 @@ extension MovieSuggestionViewController{
             }
         }))
         DispatchQueue.main.async {
+            if (self.presentedViewController == nil){
             self.present(alert, animated: true) {
                 self.addNewMoviesCollectionBtn.isEnabled = true
                 self.loadingIndicator.stopAnimating()
+            }
+                
             }
         }
         
